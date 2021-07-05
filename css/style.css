@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* Variables */
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  font-size: clamp(16px, 14px, 12px);
+}
+/* Global */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--Violet);
+  line-height: 1.6;
+  position: relative;
+}
+h2,
+p {
+  margin-bottom: 1em;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #fff;
+}
+/* === background === */
+.bg img {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.bg-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .bg-mobile {
+    display: none;
+  }
+  .bg-desktop {
+    display: block;
+  }
+}
+/* === header === */
+.header__logo {
+  width: 7.5rem;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    width: 12.5rem;
+  }
+}
+/* === main === */
+main .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+main h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  max-width: 20ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+main p {
+  opacity: 0.75;
+  font-size: 0.95em;
+}
+main button {
+  border: 0;
+  background-color: #fff;
+  color: var(--Violet);
+  padding: 1em 5em;
+  margin-top: 1em;
+  border-radius: 2rem;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+main button:active {
+  background-color: var(--Soft-Magenta);
+  color: #fff;
+}
+@media (min-width: 768px) {
+  main .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    text-align: start;
+  }
+  main h2 {
+    font-size: 2.5rem;
+    margin-left: 0;
+  }
+  main p {
+    font-size: 1.25em;
+  }
+  main button {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+/* === footer === */
+footer .social-networks {
+  display: flex;
+  justify-content: center;
+}
+footer .social-networks a {
+  text-decoration: none;
+}
+footer .social-networks i {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 0 0.5em;
+}
+footer .social-networks a:active i {
+  color: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+}
+@media (min-width: 768px) {
+  footer .social-networks {
+    justify-content: flex-end;
+  }
+  footer .social-networks i {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
